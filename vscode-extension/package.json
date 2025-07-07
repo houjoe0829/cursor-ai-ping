@@ -1,0 +1,40 @@
+{
+  "name": "cursor-ai-notifier",
+  "displayName": "Cursor AI 通知插件",
+  "description": "监控 Cursor AI 状态并发送通知",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursor-ai-notifier.startMonitoring",
+        "title": "开始监控 Cursor AI",
+        "category": "Cursor AI Notifier"
+      },
+      {
+        "command": "cursor-ai-notifier.stopMonitoring",
+        "title": "停止监控 Cursor AI",
+        "category": "Cursor AI Notifier"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.4.4"
+  }
+} 
